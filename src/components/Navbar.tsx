@@ -62,7 +62,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Amrit.</Logo>
+          <Logo>Trending Shop</Logo>
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>

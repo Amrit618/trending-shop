@@ -3,14 +3,19 @@ import styled from "styled-components";
 
 interface myProps {
   direction: string;
+  
 }
+interface props{
+    bg: boolean;
+}
+
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: coral;
   position: reltive;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div<myProps>`
@@ -32,12 +37,16 @@ const Arrow = styled.div<myProps>`
 `;
 const Wrapper = styled.div`
   height: 100%;
+  display:flex;
 `;
-const Slide = styled.div`
+const Slide = styled.div<myProps>`
   width: 100vw;
   height: 100vh;
+  padding:50px;
   display: flex;
-  align-items: center;
+  align-items:center;
+  background-color: #${myProps=>myProps.bg}
+  
 `;
 const ImageContainer = styled.div`
   height: 100%;
@@ -76,12 +85,32 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide>
+        <Slide bg = 'fcf1ed'>
           <ImageContainer>
             <Image src="https://cdn.pixabay.com/photo/2017/02/26/02/37/girl-2099359_1280.jpg" />
           </ImageContainer>
           <InfoContainer>
             <Title>WINTER SALE</Title>
+            <Desc>GET 40% DISCOUNT </Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide bg = 'fbf0f4'>
+          <ImageContainer>
+            <Image src="https://cdn.pixabay.com/photo/2017/02/26/02/37/girl-2099359_1280.jpg" />
+          </ImageContainer>
+          <InfoContainer>
+            <Title>SUMMER SALE</Title>
+            <Desc>GET 40% DISCOUNT </Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide bg = 'f5fafd'>
+          <ImageContainer>
+            <Image src="https://cdn.pixabay.com/photo/2017/02/26/02/37/girl-2099359_1280.jpg" />
+          </ImageContainer>
+          <InfoContainer>
+            <Title>TREND SALE</Title>
             <Desc>GET 40% DISCOUNT </Desc>
             <Button>SHOP NOW</Button>
           </InfoContainer>
