@@ -1,9 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Slider from '../components/Slider'
+import Trending from '../components/Trending'
 
 const Home = () => {
   return (
-    <div><Navbar/></div>
+    <div>
+      <Trending/>
+      <Navbar/>
+      <Slider/>
+      </div>
   )
 }
 
