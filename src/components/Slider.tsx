@@ -1,8 +1,8 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
 import styled from "styled-components"
 
-interface props {
-    direction: boolean;
+interface myProps {
+    direction: string;
 }
 
 const Container = styled.div`
@@ -13,7 +13,7 @@ background-color:coral;
 position: reltive;
 `
 
-const Arrow = styled.div`
+const Arrow = styled.div<myProps>`
 width:50px;
 height: 50px;
 background-color: #fff7f7;
@@ -24,8 +24,8 @@ justify-content:center;
 position: absolute;
 top:0;
 bottom:0;
-left:${props=>props.direction=== 'left' && '10px'};
-right:${props=>props.direction=== 'right' && '10px'};
+left:${myProps=>myProps.direction=== 'left' && '10px'};
+right:${myProps=>myProps.direction=== 'right' && '10px'};
 margin:auto; 
 
 `
