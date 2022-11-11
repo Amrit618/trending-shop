@@ -5,9 +5,10 @@ import {sliderItems} from '../data'
 
 interface myProps {
   direction: string;
+  slideIndex: number;
 }
 interface props {
-  bg: boolean;
+  bg: string;
 }
 
 const Container = styled.div`
@@ -79,13 +80,20 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState("");
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction: string) => {
+   if (direction==="left"){
+    setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+   } else {
+    setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0)
+   }
+  }
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper>
+      <Wrapper slideIndex = {slideIndex}>
         {sliderItems.map(item =>(
          <Slide bg="item.bg">
                     <ImageContainer>
