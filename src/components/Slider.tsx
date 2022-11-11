@@ -1,16 +1,15 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import styled from "styled-components";
-import {sliderItems} from '../data'
+import { sliderItems } from "../data";
 
 interface myProps {
   direction: string;
- 
 }
 interface props {
   bg: string;
 }
-interface index{
+interface index {
   slideIndex: any;
 }
 
@@ -43,7 +42,9 @@ const Arrow = styled.div<myProps>`
 const Wrapper = styled.div<index>`
   height: 100%;
   display: flex;
-  transform: translateX(${(index)=> index.slideIndex * -80}vw);
+  transition: all 1.5s ease;
+  transform: translateX(${(index) => index.slideIndex * -59}vw);
+
 `;
 const Slide = styled.div<props>`
   width: 100vw;
@@ -83,32 +84,31 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState<any>(0)
+  const [slideIndex, setSlideIndex] = useState<any>(0);
   const handleClick = (direction: string) => {
-   if (direction==="left"){
-    setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
-   } else {
-    setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0)
-   }
-  }
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 2 : 2);
+    } else {
+      setSlideIndex(slideIndex < 4 ? slideIndex + 2 : 0);
+    }
+  };
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper slideIndex = {slideIndex}>
-        {sliderItems.map(item =>(
-         <Slide bg="item.bg">
-                    <ImageContainer>
-            <Image src={item.img} />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>{item.title}</Title>
-            <Desc>{item.desc} </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-
-         </Slide> 
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg="item.bg">
+            <ImageContainer>
+              <Image src={item.img} />
+            </ImageContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc} </Desc>
+              <Button>SHOP NOW</Button>
+            </InfoContainer>
+          </Slide>
         ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
