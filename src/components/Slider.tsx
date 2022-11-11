@@ -5,10 +5,13 @@ import {sliderItems} from '../data'
 
 interface myProps {
   direction: string;
-  slideIndex: number;
+ 
 }
 interface props {
   bg: string;
+}
+interface index{
+  slideIndex: any;
 }
 
 const Container = styled.div`
@@ -37,12 +40,12 @@ const Arrow = styled.div<myProps>`
   opacity: 0.5;
   z-index: 2;
 `;
-const Wrapper = styled.div`
+const Wrapper = styled.div<index>`
   height: 100%;
   display: flex;
-  transform: translateX(0vw);
+  transform: translateX(${(index)=> index.slideIndex * -80}vw);
 `;
-const Slide = styled.div<myProps>`
+const Slide = styled.div<props>`
   width: 100vw;
   height: 100vh;
   padding: 50px;
@@ -80,7 +83,7 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState<any>(0)
   const handleClick = (direction: string) => {
    if (direction==="left"){
     setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
