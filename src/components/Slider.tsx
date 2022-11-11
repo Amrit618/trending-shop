@@ -1,14 +1,13 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
+import { useState } from "react";
 import styled from "styled-components";
 
 interface myProps {
   direction: string;
-  
 }
-interface props{
-    bg: boolean;
+interface props {
+  bg: boolean;
 }
-
 
 const Container = styled.div`
   width: 100%;
@@ -34,19 +33,20 @@ const Arrow = styled.div<myProps>`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `;
 const Wrapper = styled.div`
   height: 100%;
-  display:flex;
+  display: flex;
+  transform: translateX(0vw);
 `;
 const Slide = styled.div<myProps>`
   width: 100vw;
   height: 100vh;
-  padding:50px;
+  padding: 50px;
   display: flex;
-  align-items:center;
-  background-color: #${myProps=>myProps.bg}
-  
+  align-items: center;
+  background-color: #${(props) => props.bg};
 `;
 const ImageContainer = styled.div`
   height: 100%;
@@ -62,30 +62,30 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h1`
-font-size: 70px;
-`
+  font-size: 70px;
+`;
 const Desc = styled.h1`
-margin: 50px 0px;
-font-size:20px;
-font-weight:500;
-letter-spacing: 3px;
-`
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
 const Button = styled.button`
-padding:10px;
-font-size: 20px;
-background-color: transparent;
-cursor: pointer;
-
-`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+`;
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState("");
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide bg = 'fcf1ed'>
+        <Slide bg="fcf1ed">
           <ImageContainer>
             <Image src="https://cdn.pixabay.com/photo/2017/02/26/02/37/girl-2099359_1280.jpg" />
           </ImageContainer>
@@ -95,28 +95,8 @@ const Slider = () => {
             <Button>SHOP NOW</Button>
           </InfoContainer>
         </Slide>
-        <Slide bg = 'fbf0f4'>
-          <ImageContainer>
-            <Image src="https://cdn.pixabay.com/photo/2017/02/26/02/37/girl-2099359_1280.jpg" />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>SUMMER SALE</Title>
-            <Desc>GET 40% DISCOUNT </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg = 'f5fafd'>
-          <ImageContainer>
-            <Image src="https://cdn.pixabay.com/photo/2017/02/26/02/37/girl-2099359_1280.jpg" />
-          </ImageContainer>
-          <InfoContainer>
-            <Title>TREND SALE</Title>
-            <Desc>GET 40% DISCOUNT </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
