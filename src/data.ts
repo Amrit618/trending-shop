@@ -57,26 +57,34 @@ export const categories = [
 export const popularProducts = [
     {
         id:1,
-        img:"https://cdn.pixabay.com/photo/2017/11/23/03/17/christmas-2971961__480.jpg", 
+        img:"https://cdn.pixabay.com/photo/2014/02/27/16/10/medieval-276019__480.jpg", 
     },
     {
         id:2,
-        img:"https://cdn.pixabay.com/photo/2016/03/27/19/57/cold-1284028__480.jpg", 
+        img:"https://cdn.pixabay.com/photo/2021/02/11/05/21/woman-6004239__480.jpg", 
     },
     {
         id:3,
-        img:"https://cdn.pixabay.com/photo/2019/01/25/13/47/beautiful-people-3954533__480.jpg", 
+        img:"https://cdn.pixabay.com/photo/2020/09/20/14/08/woman-5587219__480.jpg", 
     },
     {
         id:4,
-        img:"https://cdn.pixabay.com/photo/2016/10/16/13/44/young-woman-1745173__480.jpg", 
+        img:"https://cdn.pixabay.com/photo/2015/08/12/12/31/woman-885850__480.jpg", 
     },
     {
         id:5,
-        img:"https://cdn.pixabay.com/photo/2017/07/08/09/45/joy-2483926__480.jpg", 
+        img:"https://cdn.pixabay.com/photo/2015/04/25/20/20/dress-739665__480.jpg", 
     },
     {
         id:6,
-        img:"https://cdn.pixabay.com/photo/2021/03/29/11/38/portrait-6133826__480.jpg", 
+        img:"https://cdn.pixabay.com/photo/2016/08/26/20/44/elan-1623085__480.jpg", 
+    },
+    {
+        id:7,
+        img:"https://cdn.pixabay.com/photo/2017/07/31/18/12/people-2559669__480.jpg", 
+    },
+    {
+        id:8,
+        img:"https://cdn.pixabay.com/photo/2016/08/26/20/44/elan-1623090__480.jpg", 
     },
 ]

@@ -1,20 +1,19 @@
-import React from 'react'
-import Categories from '../components/Categories'
-import Navbar from '../components/Navbar'
-import Products from '../components/Products'
-import Slider from '../components/Slider'
-import Trending from '../components/Trending'
+import Categories from "../components/Categories";
+import Navbar from "../components/Navbar";
+import Products from "../components/Products";
+import Slider from "../components/Slider";
+import Trending from "../components/Trending";
 
 const Home = () => {
   return (
     <div>
-      <Trending/>
-      <Navbar/>
-      <Slider/>
+      <Trending />
+      <Navbar />
+      <Slider />
       <Categories />
-      <Products/>
-      </div>
-  )
-}
+      <Products />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
