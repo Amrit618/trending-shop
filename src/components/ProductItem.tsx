@@ -10,9 +10,9 @@ width:100%;
 height: 100%;
 position: absolute;
 top: 0;
-left: -19px;
+left: 2px;
 background-color: rgba(0,0,0,0.2);
-z-index: 3;
+z-index: 4;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -29,26 +29,32 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
+  background-color:white;
   position:relative;
-
   &:hover ${Info}{
    opacity:1; 
   }
 `;
 const Circle = styled.div`
-  width: 200px;
+/*   width: 200px;
   height: 200px;
-  border-radius:50%;
+  border-radius:70%;
   background-color: white;
-  position: absolute;
+  position: absolute; */
 `;
 const Image = styled.img`
-  display:flex;
-  margin:100px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+row-gap: 25px;
+column-gap: 25px;
+/*   display:flex;
   padding: 300px;
-  heigth: 50%;
-  z-index: 2;
+  margin:100px;
+  heigth: auto;
+  row-gap: 50px;
+  column-gap:50px;
+  z-index: 2; */
 `;
 
 

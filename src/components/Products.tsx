@@ -3,9 +3,10 @@ import { popularProducts } from "../data"
 import ProductItem from "./ProductItem"
 
 const Container = styled.div`
-padding:20px;
+padding:30px;
 display:flex;
 flex-wrap:wrap;
+align-items: center;
 justify-content:space-between;
 `
 ;
