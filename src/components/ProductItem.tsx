@@ -44,7 +44,8 @@ const Circle = styled.div`
   position: absolute;
 `;
 const Image = styled.img`
-  margin:10px;
+  display:flex;
+  margin:100px;
   padding: 300px;
   heigth: 50%;
   z-index: 2;
