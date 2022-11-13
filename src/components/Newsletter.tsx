@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
 height: 60vh;
-background-color: white;
+background-color: solid lightgray;
 display: flex;
 align-items: center;
 justify-content: center;
