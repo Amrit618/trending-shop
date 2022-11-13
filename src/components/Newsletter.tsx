@@ -1,3 +1,4 @@
+import { Send } from "@material-ui/icons"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -6,31 +7,27 @@ background-color: white;
 display: flex;
 align-items: center;
 justify-content: center;
+flex-direction:column; 
 `
 const Title = styled.h1`
-margin: auto;
-padding: auto;
+
 `
 const Description = styled.h2`
-margin: auto;
-padding: auto;
+
 `
 const InputContainer = styled.div`
-margin: auto;
-padding: auto;
+
 `
 const Input = styled.input`
-margin: auto;
-padding: auto;
+
 `
 const Button = styled.button`
+
+`
+/* const Send = styled.div`
 margin: auto;
 padding: auto;
-`
-const Send = styled.div`
-margin: auto;
-padding: auto;
-`
+` */
 
 const Newsletter = () => {
   return (
@@ -46,5 +43,4 @@ const Newsletter = () => {
     </Container>
   )
 }
-
 export default Newsletter
