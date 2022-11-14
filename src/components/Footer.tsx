@@ -10,7 +10,7 @@ import {
 import styled from "styled-components";
 
 interface Payment{
-    src:any;
+    src:string;
 }
 
 const Container = styled.div`
@@ -71,7 +71,7 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
 `;
-const Payment = styled.div`
+const Payment = styled.div<Payment>`
   width: 50%;
 `;
 
@@ -125,7 +125,7 @@ const Footer = ({src}:string | any) => {
           <MailOutline style={{marginRight: "10px"}}/>
           contact@trending.com
         </ContactItem>
-        <Payment placeholder="https://i.ibb.co/Qfvn4z6/payment.png"/>
+        <Payment src ="https://i.ibb.co/Qfvn4z6/payment.png"/>
       </Right>
     </Container>
   );

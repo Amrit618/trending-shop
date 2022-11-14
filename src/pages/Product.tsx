@@ -4,10 +4,14 @@ import Navbar from "../components/Navbar"
 import Newsletter from "../components/Newsletter"
 import Trending from "../components/Trending"
 
+interface newprops{
+    src: string;
+}
+
 const Container = styled.div``
 const Wrapper = styled.div``
 const ImgContainer = styled.div``
-const Image = styled.div``
+const Image = styled.div<newprops>``
 const InfoContainer = styled.div``
 const Title = styled.div``
 const Desc = styled.div``
