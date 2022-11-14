@@ -114,15 +114,15 @@ const Footer = ({src}:string | any) => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room />
+          <Room style={{marginRight: "10px"}}/>
           Helsinki, Kaivokatu 13
         </ContactItem>
         <ContactItem>
-          <Phone />
+          <Phone style={{marginRight: "10px"}} />
           +3584236664
         </ContactItem>
         <ContactItem>
-          <MailOutline />
+          <MailOutline style={{marginRight: "10px"}}/>
           contact@trending.com
         </ContactItem>
         <Payment placeholder="https://i.ibb.co/Qfvn4z6/payment.png"/>
