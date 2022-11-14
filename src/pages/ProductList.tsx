@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Navbar from "../components/Navbar"
+import Newsletter from "../components/Newsletter"
 import Products from "../components/Products"
 import Trending from "../components/Trending"
 
@@ -28,6 +29,7 @@ const ProductList = () => {
             <Filter>Filter2</Filter>
         </FilterContainer>
         <Products />
+        <Newsletter/>
     </Container>
   )
 }
