@@ -1,49 +1,53 @@
-import styled from "styled-components"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
-import Newsletter from "../components/Newsletter"
-import Trending from "../components/Trending"
+import styled from "styled-components";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Newsletter from "../components/Newsletter";
+import Trending from "../components/Trending";
 
-interface newprops{
-    src: string;
+interface newprops {
+  src: any;
 }
 
-const Container = styled.div``
+const Container = styled.div``;
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  padding: 50px;
+  display: flex;
+`;
 
-const ImgContainer = styled.div``
+const ImgContainer = styled.div``;
 
-const Image = styled.div<newprops>`
-padding: 105px;`
+const Image = styled.img<newprops>`
+  padding: 105px;
+`;
 
-const InfoContainer = styled.div``
+const InfoContainer = styled.div``;
 
-const Title = styled.h1``
+const Title = styled.h1``;
 
-const Desc = styled.p``
+const Desc = styled.p``;
 
-const Price = styled.span``
+const Price = styled.span``;
 
-const Product =() => {
+const Product = () => {
   return (
     <Container>
-        <Navbar/>
-        <Trending/>
-        <Wrapper>
-            <ImgContainer>
-            <Image src= "https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_1280.jpg"/>
-            </ImgContainer>
-            <InfoContainer>
-                <Title>Fashion jacket</Title>
-                <Desc>Hi there this is very nice product</Desc>
-                <Price>20$</Price>
-            </InfoContainer>
-        </Wrapper>
-        <Newsletter/>
-        <Footer/>
+      <Navbar />
+      <Trending />
+      <Wrapper>
+        <ImgContainer>
+          <Image src="https://cdn.pixabay.com/photo/2017/06/08/02/14/girl-2382231_1280.jpg" />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>Fashion jacket</Title>
+          <Desc>Hi there, this is very nice product</Desc>
+          <Price>20$</Price>
+        </InfoContainer>
+      </Wrapper>
+      <Newsletter />
+      <Footer />
     </Container>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
