@@ -47,9 +47,15 @@ const Bottom = styled.div`
 const Info = styled.div`
   flex: 3;
 `;
-const Product = styled.div``;
+const Product = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
-const ProductDetail = styled.div``;
+const ProductDetail = styled.div`
+  flex: 2;
+  display: flex;
+`;
 
 const Image = styled.img<image>`
   background-color: white;
@@ -57,15 +63,17 @@ const Image = styled.img<image>`
 
 const Details = styled.div``;
 
-const ProductName = styled.div``;
+const ProductName = styled.span``;
 
-const ProductId = styled.div``;
+const ProductId = styled.span``;
 
 const ProductColor = styled.div``;
 
-const ProductSize = styled.div``;
+const ProductSize = styled.span``;
 
-const PriceDetail = styled.div``;
+const PriceDetail = styled.div`
+  flex: 1;
+`;
 
 const Summary = styled.div`
   flex: 1;
@@ -96,7 +104,7 @@ const Cart = () => {
                     <b>Product:</b> Winter Jacket
                   </ProductName>
                   <ProductId>
-                    <b>Product:</b> Winter Jacket
+                    <b>Product:</b> 12345
                   </ProductId>
                   <ProductColor />
                   <ProductSize>
