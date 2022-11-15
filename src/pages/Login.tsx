@@ -43,9 +43,10 @@ padding: 20px;
 background-color: teal;
 color:white;
 cursor: pointer;
+margin-bottom: 10px;
 `
 const Link = styled.a`
-margin: 5px opx;
+margin: 5px 0px;
 font-size: 12 px;
 text-decoration: underline;
 cursor: pointer;
