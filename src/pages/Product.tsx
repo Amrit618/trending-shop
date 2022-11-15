@@ -9,22 +9,30 @@ interface newprops{
 }
 
 const Container = styled.div``
-const Wrapper = styled.div``
-const ImgContainer = styled.div``
-const Image = styled.div<newprops>``
-const InfoContainer = styled.div``
-const Title = styled.div``
-const Desc = styled.div``
-const Price = styled.div``
 
-const Product = () => {
+const Wrapper = styled.div``
+
+const ImgContainer = styled.div``
+
+const Image = styled.div<newprops>`
+padding: 105px;`
+
+const InfoContainer = styled.div``
+
+const Title = styled.h1``
+
+const Desc = styled.p``
+
+const Price = styled.span``
+
+const Product =() => {
   return (
     <Container>
         <Navbar/>
         <Trending/>
         <Wrapper>
             <ImgContainer>
-            <Image src = "https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_1280.jpg"/>
+            <Image src= "https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_1280.jpg"/>
             </ImgContainer>
             <InfoContainer>
                 <Title>Fashion jacket</Title>
