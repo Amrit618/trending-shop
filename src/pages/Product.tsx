@@ -15,19 +15,33 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
-const ImgContainer = styled.div``;
-
-const Image = styled.img<newprops>`
-  padding: 105px;
+const ImgContainer = styled.div`
+flex:1;
 `;
 
-const InfoContainer = styled.div``;
+const Image = styled.img<newprops>`
+  width:100%;
+  height: 90vh;
+  object-fit: cover;
+`;
 
-const Title = styled.h1``;
+const InfoContainer = styled.div`
+flex:1;
+padding:0px 50px;
+`;
 
-const Desc = styled.p``;
+const Title = styled.h1`
+font-weight: 200;
+`;
 
-const Price = styled.span``;
+const Desc = styled.p`
+margin: 20px 0px;
+`;
+
+const Price = styled.span`
+font-weight: 100;
+font-size: 40px;
+`;
 
 const Product = () => {
   return (
@@ -41,7 +55,7 @@ const Product = () => {
         <InfoContainer>
           <Title>Fashion jacket</Title>
           <Desc>Hi there, this is very nice product</Desc>
-          <Price>20$</Price>
+          <Price>Price:$20</Price>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
