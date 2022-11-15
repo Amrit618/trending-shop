@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Trending from "../components/Trending";
 
-interface props{
-    type: string;
+interface image {
+  src: string;
 }
 
 const Container = styled.div``;
@@ -22,27 +22,54 @@ const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
 `;
 
-const TopButton = styled.button<props>`
+const TopButton = styled.button`
   padding: 10px;
   font-weight: 600;
   cursor: pointer;
-  border: ${props=>props.type === "filled" && "none"};
-  background-color: ${props=>props.type === "filled" ? "black" : "transparent"};
-  color: ${props=>props.type === "filled" && "white"};
 `;
 
-const TopTexts = styled.div``
+const TopTexts = styled.div``;
 
 const TopText = styled.span`
-text-decoration: underline;
-cursor: pointer;
-margin: 0px 10px;
-`
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0px 10px;
+`;
 
-const Bottom = styled.div``;
+const Bottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
+const Info = styled.div`
+  flex: 3;
+`;
+const Product = styled.div``;
+
+const ProductDetail = styled.div``;
+
+const Image = styled.img<image>`
+  background-color: white;
+`;
+
+const Details = styled.div``;
+
+const ProductName = styled.div``;
+
+const ProductId = styled.div``;
+
+const ProductColor = styled.div``;
+
+const ProductSize = styled.div``;
+
+const PriceDetail = styled.div``;
+
+const Summary = styled.div`
+  flex: 1;
+`;
 
 const Cart = () => {
   return (
@@ -57,9 +84,31 @@ const Cart = () => {
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist</TopText>
           </TopTexts>
-          <TopButton type="filled">CHECKOUT</TopButton>
+          <TopButton /* type="filled" */>CHECKOUT</TopButton>
         </Top>
-        <Bottom></Bottom>
+        <Bottom>
+          <Info>
+            <Product>
+              <ProductDetail>
+                <Image src="https://cdn.pixabay.com/photo/2018/05/12/12/54/girl-3393214_1280.jpg" />
+                <Details>
+                  <ProductName>
+                    <b>Product:</b> Winter Jacket
+                  </ProductName>
+                  <ProductId>
+                    <b>Product:</b> Winter Jacket
+                  </ProductId>
+                  <ProductColor />
+                  <ProductSize>
+                    <b>Size:</b>26.5 Winter Jacket
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>Price</PriceDetail>
+            </Product>
+          </Info>
+          <Summary>summary</Summary>
+        </Bottom>
       </Wrapper>
       <Footer />
     </Container>
