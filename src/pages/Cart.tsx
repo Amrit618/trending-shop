@@ -7,6 +7,7 @@ interface image {
   src: string;
 }
 
+
 const Container = styled.div``;
 
 const Wrapper = styled.div`
@@ -115,7 +116,7 @@ const Cart = () => {
               <PriceDetail>Price</PriceDetail>
             </Product>
           </Info>
-          <Summary>summary</Summary>
+          <Summary>Summary</Summary>
         </Bottom>
       </Wrapper>
       <Footer />
