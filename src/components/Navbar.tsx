@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({padding: "10px 0px"})}
 `
 const Left = styled.div`
   flex: 1;
@@ -21,6 +22,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({display:"none"})};
 `
 const SearchContainer = styled.div`
   border: 0.5px solid lightgrey;
@@ -31,6 +33,7 @@ const SearchContainer = styled.div`
 `
 const Input = styled.input`
   border: none;
+  ${mobile({width:"50px"})}
 `
 
 const Center = styled.div`
@@ -58,7 +61,7 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="search"/>
             <Search style={{ color: "gray", fontSize: "16px" }} />
           </SearchContainer>
         </Left>
