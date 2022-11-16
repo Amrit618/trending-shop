@@ -36,6 +36,7 @@ const Container = styled.div`
     opacity: 1;
   }
 `;
+
 const Circle = styled.div`
   /*   width: 200px;
   height: 200px;
@@ -43,6 +44,7 @@ const Circle = styled.div`
   background-color: white;
   position: absolute; */
 `;
+
 const Image = styled.img`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

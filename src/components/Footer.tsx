@@ -9,8 +9,8 @@ import {
 } from "@material-ui/icons";
 import styled from "styled-components";
 
-interface Payment{
-    src:string;
+interface Payment {
+  src: string;
 }
 
 const Container = styled.div`
@@ -75,7 +75,7 @@ const Payment = styled.div<Payment>`
   width: 50%;
 `;
 
-const Footer = ({src}:string | any) => {
+const Footer = ({ src }: string | any) => {
   return (
     <Container>
       <Left>
@@ -114,18 +114,18 @@ const Footer = ({src}:string | any) => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight: "10px"}}/>
+          <Room style={{ marginRight: "10px" }} />
           Helsinki, Kaivokatu 13
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight: "10px"}} />
+          <Phone style={{ marginRight: "10px" }} />
           +3584236664
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight: "10px"}}/>
+          <MailOutline style={{ marginRight: "10px" }} />
           contact@trending.com
         </ContactItem>
-        <Payment src ="https://i.ibb.co/Qfvn4z6/payment.png"/>
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
   );

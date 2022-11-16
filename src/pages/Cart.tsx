@@ -7,7 +7,7 @@ import Trending from "../components/Trending";
 interface image {
   src: string;
 }
-interface props{
+interface props {
   type?: any;
 }
 
@@ -123,23 +123,23 @@ const Summary = styled.div`
 `;
 
 const SummaryTitle = styled.h1`
-font-weight: 200;
+  font-weight: 200;
 `;
 const SummaryItem = styled.div<props>`
-margin: 30px 0px;
-display: flex;
-justify-content: space-between;
-font-weight: ${props=>props.typeof === "total" && "500" };
-font-size: ${props=>props.typeof === "total" && "24px" };
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.typeof === "total" && "500"};
+  font-size: ${(props) => props.typeof === "total" && "24px"};
 `;
 const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
 const Button = styled.button`
-width: 100%;
-padding: 10px;
-background-color:green;
-color:white;
-font-weight: 600; 
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  font-weight: 600;
 `;
 
 const Cart = () => {

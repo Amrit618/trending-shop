@@ -6,13 +6,16 @@ import Products from "../components/Products";
 import Trending from "../components/Trending";
 
 const Container = styled.div``;
+
 const Title = styled.h1`
   margin: 20px;
 `;
+
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 const Filter = styled.div`
   margin: 20px;
 `;
@@ -24,8 +27,8 @@ const FilterText = styled.span`
 `;
 
 const Select = styled.select`
-padding:10px;
-margin-right: 20px;
+  padding: 10px;
+  margin-right: 20px;
 `;
 const Option = styled.option``;
 
