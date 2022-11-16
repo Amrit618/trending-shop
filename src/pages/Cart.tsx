@@ -134,7 +134,13 @@ font-size: ${props=>props.typeof === "total" && "24px" };
 `;
 const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
-const Button = styled.button``;
+const Button = styled.button`
+width: 100%;
+padding: 10px;
+background-color:green;
+color:white;
+font-weight: 600; 
+`;
 
 const Cart = () => {
   return (
