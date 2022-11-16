@@ -7,6 +7,9 @@ import Trending from "../components/Trending";
 interface image {
   src: string;
 }
+interface props{
+  type?: any;
+}
 
 const Container = styled.div``;
 
@@ -116,10 +119,19 @@ const Summary = styled.div`
   border: 0.5px solid lightgray;
   border-radius: 10px;
   padding: 20px;
+  height: 50vh;
 `;
 
-const SummaryTitle = styled.h1``;
-const SummaryItem = styled.div``;
+const SummaryTitle = styled.h1`
+font-weight: 200;
+`;
+const SummaryItem = styled.div<props>`
+margin: 30px 0px;
+display: flex;
+justify-content: space-between;
+font-weight: ${props=>props.typeof === "total" && "500" };
+font-size: ${props=>props.typeof === "total" && "24px" };
+`;
 const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
 const Button = styled.button``;
@@ -207,8 +219,8 @@ const Cart = () => {
               <SummaryItemText>Shipping Discount</SummaryItemText>
               <SummaryItemPrice>$ -8.30</SummaryItemPrice>
             </SummaryItem>
-            <SummaryItem>
-              <SummaryItemText /* type = 'total' */>Total</SummaryItemText>
+            <SummaryItem typeof="total">
+              <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>$100</SummaryItemPrice>
             </SummaryItem>
             <Button> CHECKOUT NOW</Button>
