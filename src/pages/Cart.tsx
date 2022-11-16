@@ -1,3 +1,4 @@
+import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -6,10 +7,6 @@ import Trending from "../components/Trending";
 interface image {
   src: string;
 }
-interface props{
-  color: string;
-}
-
 
 const Container = styled.div``;
 
@@ -62,36 +59,70 @@ const ProductDetail = styled.div`
 `;
 
 const Image = styled.img<image>`
-  width:400px;
+  width: 300px;
 `;
 
 const Details = styled.div`
-padding: 20px;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 const ProductName = styled.span``;
 
 const ProductId = styled.span``;
 
-const ProductColor = styled.div<props>`
-width: 20px;
-height: 20px;
-border-radius: 50%;
-background-color: ${props=>props.color};
+const ProductColor = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: ${(props) => props.color};
 `;
 
 const ProductSize = styled.span``;
 
 const PriceDetail = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProductAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+const ProductAmount = styled.div`
+  font-size: 24px;
+  margin: 5px;
+`;
+
+const ProductPrice = styled.div`
+  font-size: 30px;
+  font-weight: 200;
+`;
+const Hr = styled.hr`
+  background-color: #eee;
+  border: none;
+  height: 1px;
 `;
 
 const Summary = styled.div`
   flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
 `;
+
+const SummaryTitle = styled.h1``;
+const SummaryItem = styled.div``;
+const SummaryItemText = styled.span``;
+const SummaryItemPrice = styled.span``;
+const Button = styled.button``;
 
 const Cart = () => {
   return (
@@ -120,16 +151,68 @@ const Cart = () => {
                   <ProductId>
                     <b>ProductId:</b> 12345
                   </ProductId>
-                  <ProductColor color = "red" />
+                  <ProductColor color="red" />
                   <ProductSize>
-                    <b>Size:</b>26.5 
+                    <b>Size:</b>26.5
                   </ProductSize>
                 </Details>
               </ProductDetail>
-              <PriceDetail>Price</PriceDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>2</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice></ProductPrice>
+              </PriceDetail>
+            </Product>
+            <Hr />
+            <Product>
+              <ProductDetail>
+                <Image src="https://cdn.pixabay.com/photo/2013/07/25/11/52/clothes-166848_1280.jpg" />
+                <Details>
+                  <ProductName>
+                    <b>Product:</b> Long Coat
+                  </ProductName>
+                  <ProductId>
+                    <b>ProductId:</b> 12345
+                  </ProductId>
+                  <ProductColor color="red" />
+                  <ProductSize>
+                    <b>Size:</b>26.5
+                  </ProductSize>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                  <Add />
+                  <ProductAmount>2</ProductAmount>
+                  <Remove />
+                </ProductAmountContainer>
+                <ProductPrice></ProductPrice>
+              </PriceDetail>
             </Product>
           </Info>
-          <Summary>Summary</Summary>
+          <Summary>
+            <SummaryTitle> ORDER SUMMARY</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
+              <SummaryItemPrice>$100</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping</SummaryItemText>
+              <SummaryItemPrice>$8.30</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrice>$ -8.30</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText /* type = 'total' */>Total</SummaryItemText>
+              <SummaryItemPrice>$100</SummaryItemPrice>
+            </SummaryItem>
+            <Button> CHECKOUT NOW</Button>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />
