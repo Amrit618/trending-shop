@@ -6,6 +6,9 @@ import Trending from "../components/Trending";
 interface image {
   src: string;
 }
+interface props{
+  color: string;
+}
 
 
 const Container = styled.div``;
@@ -59,16 +62,26 @@ const ProductDetail = styled.div`
 `;
 
 const Image = styled.img<image>`
-  background-color: white;
+  width:400px;
 `;
 
-const Details = styled.div``;
+const Details = styled.div`
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+`;
 
 const ProductName = styled.span``;
 
 const ProductId = styled.span``;
 
-const ProductColor = styled.div``;
+const ProductColor = styled.div<props>`
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: ${props=>props.color};
+`;
 
 const ProductSize = styled.span``;
 
@@ -102,14 +115,14 @@ const Cart = () => {
                 <Image src="https://cdn.pixabay.com/photo/2018/05/12/12/54/girl-3393214_1280.jpg" />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> Winter Jacket
+                    <b>Product:</b> Long Coat
                   </ProductName>
                   <ProductId>
-                    <b>Product:</b> 12345
+                    <b>ProductId:</b> 12345
                   </ProductId>
-                  <ProductColor />
+                  <ProductColor color = "red" />
                   <ProductSize>
-                    <b>Size:</b>26.5 Winter Jacket
+                    <b>Size:</b>26.5 
                   </ProductSize>
                 </Details>
               </ProductDetail>
