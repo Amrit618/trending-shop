@@ -32,6 +32,7 @@ export const categories = [
     img: "https://cdn.pixabay.com/photo/2018/05/12/12/54/girl-3393214_1280.jpg",
     title: "LONG COAT",
   },
+  
   {
     id: 3,
     img: "https://cdn.pixabay.com/photo/2017/06/08/02/14/girl-2382231_1280.jpg",
