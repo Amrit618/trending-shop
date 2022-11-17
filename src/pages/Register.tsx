@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   background-color: white;
 `;
 
-const Form = styled.form`
+const Form = styled.form ` 
   display: flex;
   flex-wrap: wrap;
 `;
@@ -67,7 +67,7 @@ const Register = () => {
           <Agreement>
             {" "}
             By creating an account, I consent to the processing of my personal
-            data with <b>PRIVACY POLICY</b>
+            data with<b>PRIVACY POLICY</b>
           </Agreement>
           <Button> Create</Button>
         </Form>
