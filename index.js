@@ -3,5 +3,5 @@ const app = express()
 const mongoose = require('mongoose')
 
 app.listen(4000, () =>{
-    console.log("First program is running")
+    console.log("First program is running new on server")
 })
