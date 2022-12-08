@@ -1,12 +1,17 @@
 const express = require ("express")
 const app = express()
 const mongoose = require('mongoose')
+const dotenv = require("dotenv")
 
-mongoose.connect("mongodb+srv://amrit:amrit@amritcluster.ufmjl.mongodb.net/?retryWrites=true&w=majority")
-.then(()=>("DBConnection successful"))
-.catch((error) =>
-{console.log('error')});
+dotenv.config()
+mongoose.set() 
 
-app.listen(4000, () =>{
-    console.log("First program is running new on server")
+mongoose
+.connect(process.env.MONGO_URI)
+.then(()=>console.log("DBConnection successful"))
+.catch((err) =>
+{console.log(err)});
+
+app.listen(process.env.PORT || 4000, () =>{
+    console.log("First program is running new on server on port 4000")
 })
