@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 
-const CartSchema = new mongoose.Schema(
+const OrderSchema = new mongoose.Schema(
   {
     userId: { type: String, required: true },
-    products: [{
+    products: [
+      {
         productId: {
             type: String,
         },
@@ -11,7 +12,11 @@ const CartSchema = new mongoose.Schema(
             type: Number,
             default: 1
         }
-    }],
+    },
+  ],
+  amount: {type: Number, required: true},
+  address:{type: Object, required: true}, 
+  status: {type: String, default: "pending"},
    
     isAdmin: {
       type: Boolean,

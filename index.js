@@ -7,7 +7,7 @@ const userRoute = require("./routes/User");
 dotenv.config();
 mongoose
   .connect(
-    "mongodb+srv://amrit:amrit@amritcluster.ufmjl.mongodb.net/?retryWrites=true&w=majority"
+    process.env.MONGO
   )
   .then(() => console.log("DB successful"))
   .catch((err) => {
@@ -16,6 +16,6 @@ mongoose
 app.use(express.json())
 app.use("/api", userRoute);
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("Backend server is running");
 });
