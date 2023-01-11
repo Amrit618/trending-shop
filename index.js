@@ -7,16 +7,14 @@ const authRoute = require("./routes/Auth");
 
 dotenv.config();
 mongoose
-  .connect(
-    process.env.MONGO
-  )
+  .connect(process.env.MONGO)
   .then(() => console.log("DB successful"))
   .catch((err) => {
     console.log(err);
   });
-app.use(express.json())
+app.use(express.json());
 app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute)
+app.use("/api/users", userRoute);
 
 app.listen(process.env.PORT || 4000, () => {
   console.log("Backend server is running");
