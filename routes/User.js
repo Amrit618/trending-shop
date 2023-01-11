@@ -46,7 +46,6 @@ router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 //GET ALL USERS
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
   const query = req.query.new
